@@ -8,13 +8,23 @@ package com.wallace.controller;
  * @Author yajuxi
  */
 
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.wallace.pojo.CkList;
+import com.wallace.service.CkListService;
+import com.wallace.service.UserService;
+import com.wallace.utils.Result;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("ck")
 @CrossOrigin
 public class CkListController {
+    @Autowired
+    private CkListService ckListService;
+    @GetMapping("/{cid}")
+    public Result findCkByCid(@PathVariable(name = "cid") Integer cid){
+        Result result = ckListService.findByCid(cid);
+        return result;
+    }
 
 }

@@ -11,6 +11,6 @@
     </resultMap>
 
     <sql id="Base_Column_List">
-#         uid,version,is_deleted
+         uid,version,is_deleted
     </sql>
 </mapper>

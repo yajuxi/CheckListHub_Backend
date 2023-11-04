@@ -1,9 +1,7 @@
 package com.wallace.pojo;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
+
 import java.io.Serializable;
 import lombok.Data;
 
@@ -13,6 +11,7 @@ import lombok.Data;
 @TableName(value ="ck_list")
 @Data
 public class CkList implements Serializable {
+    @TableId
     private Integer cid;
 
     private Integer uid;
@@ -20,9 +19,9 @@ public class CkList implements Serializable {
     private String header;
 
     private Object checklist;
-
+    @Version
     private Integer version;
-
+    @TableLogic
     private Integer isDeleted;
 
     private static final long serialVersionUID = 1L;

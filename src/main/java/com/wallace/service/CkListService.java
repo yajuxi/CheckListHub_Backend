@@ -2,6 +2,7 @@ package com.wallace.service;
 
 import com.wallace.pojo.CkList;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.wallace.utils.Result;
 
 /**
 * @author y1693
@@ -9,5 +10,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 * @createDate 2023-11-03 14:03:34
 */
 public interface CkListService extends IService<CkList> {
-
+    /* 根据cklistid查询cklist
+    * */
+     Result findByCid(Integer cid);
 }

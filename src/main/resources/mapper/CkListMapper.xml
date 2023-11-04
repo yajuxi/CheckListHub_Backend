@@ -14,7 +14,7 @@
     </resultMap>
 
     <sql id="Base_Column_List">
-#         cid,uid,header,
-#         checklist,version,is_deleted
+         cid,uid,header,
+         checklist,version,is_deleted
     </sql>
 </mapper>

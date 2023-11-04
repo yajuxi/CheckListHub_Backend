@@ -10,6 +10,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 * @Entity com.wallace.pojo.CkList
 */
 public interface CkListMapper extends BaseMapper<CkList> {
+    
 
 }
 
